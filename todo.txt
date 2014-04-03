@@ -1,0 +1,17 @@
+- Saubere Nummerierung und Zusammenfassen einiger Hauptpunkte / Aussortieren
+- Geotagging dazu
+    - Technische Umsetzung,
+    - GPS,
+    - Geocoding
+    - Geotags in Fotos (EXIF, XMP)
+    - HTML-Einbindung (Meta-Tag, Mikroformate, RDF)
+    - Geotagging in Anwendung: z.B. Flickr, Panoramio, Wikipedia etc.
+    - Google Maps, Google Earth, Google Street View
+    - Geotagging und Suchmaschinen => Warum ist das wichtig (Pubs in der Nähe)
+    - Geoblogging und andere Social-Media-Anwendungen (Twitter, Facebook, Flickr etc
+    - GPS bzw. Koordinaten
+    - Einzelne shape formen (punkt, linestring, ...)
+    - Doppeldeutige Koordinaten an Grenzen
+- Hinweis auf das Googlemaps tool
+- Jeweils ein kleines Beispiel, was man mit den APIs machen kann
+- Schauen ob die Übungen noch gehen
