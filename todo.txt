@@ -15,3 +15,4 @@
 - Hinweis auf das Googlemaps tool
 - Jeweils ein kleines Beispiel, was man mit den APIs machen kann
 - Schauen ob die Übungen noch gehen
+- Alles in ne Ordentlich Reihenfolge bringen mit Index und so

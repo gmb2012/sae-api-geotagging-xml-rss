@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Bjoern's x1E'er Burzeltag</title>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</head>
+<body style="font-family: Arial, Helvetica, Sans-Serif; font-size: 12px;">
+<h1>Wegbeschreibung</h1>
+
+<br />
+Ein Klick auf den jeweiligen Marker in der Karte zeigt euch, was wo ist... ;-)
+
+<br /><br />
+
+<!-- Karte integrieren sowie Breite und Höhe festlegen -->
+<div id="map" style="width: 950px; height: 600px"></div> <!-- Falls im Browser kein Javascript aktiviert ist wird diese Meldung ausgegeben -->
+<noscript>Du mußt in deinem Browser JavaScript aktivieren um Google Maps zu verwenden</noscript>
+<script type="text/javascript">
+//<![CDATA[
+
+window.onload = function() {
+	// map init
+	var map = new google.maps.Map(document.getElementById("map"),
+				{
+					zoom: 16,
+					center: new google.maps.LatLng(48.738639, 9.122771),
+					mapTypeId: google.maps.MapTypeId.HYBRID,
+					mapTypeControl: true,
+					scaleControl: true
+				}
+	);
+
+
+	// create icons
+	var icon1 = new google.maps.Marker({
+		position: new google.maps.LatLng(48.738733, 9.125276),
+		map: map,
+		icon: 'zielflagge.png'
+	});
+	
+	infowindow1 = new google.maps.InfoWindow({
+		content: '<strong>Burzeltag-Location / Müller\'sche Grillwiese</strong>'
+	});
+	
+	google.maps.event.addListener(icon1, 'click', function() {
+		infowindow1.open(map, icon1);
+	});
+	
+	var icon2 = new google.maps.Marker({
+		position: new google.maps.LatLng(48.739354, 9.126380),
+		map: map,
+		icon: 'parkplatz.png'
+	});
+	
+	infowindow2 = new google.maps.InfoWindow({
+		content: '<strong>Hochfirststr. 1A</strong><br /> In der Hochfirststr. oder der Schliffkopfstr. parken <br />und dann links neben der Nr. 1A dem kleinen Weg und den Luftpallons folgen.'
+	});
+	
+	google.maps.event.addListener(icon2, 'click', function() {
+		infowindow2.open(map, icon2);
+	});
+	
+	var icon3 = new google.maps.Marker({
+		position: new google.maps.LatLng(48.738264, 9.115766),
+		map: map,
+		icon: 's-bahn.png'
+	});
+	
+	infowindow3 = new google.maps.InfoWindow({
+		content: '<strong>S-Bahn Station Österfeld</strong><br />Bis zur Schule durchkämpfen und von dort den Luftballons folgen.'
+	});
+	
+	google.maps.event.addListener(icon3, 'click', function() {
+		infowindow3.open(map, icon3);
+	});
+	
+	// polylines
+	new google.maps.Polyline({
+		path:
+			[
+				new google.maps.LatLng(48.739354, 9.126380), 
+				new google.maps.LatLng(48.739227, 9.126458),
+				new google.maps.LatLng(48.738562, 9.125819), 
+				new google.maps.LatLng(48.738733, 9.125276),
+				new google.maps.LatLng(48.738943, 9.125010),
+				new google.maps.LatLng(48.738862, 9.124815),
+				new google.maps.LatLng(48.738761, 9.124508),
+				new google.maps.LatLng(48.737960, 9.123714),
+				new google.maps.LatLng(48.737580, 9.123479),
+				new google.maps.LatLng(48.737699, 9.123022),
+				new google.maps.LatLng(48.737641, 9.122827),
+				new google.maps.LatLng(48.737944, 9.122346),
+				new google.maps.LatLng(48.737908, 9.122141),
+				new google.maps.LatLng(48.737658, 9.121851),
+				new google.maps.LatLng(48.737752, 9.121760),
+				new google.maps.LatLng(48.738012, 9.121616),
+				new google.maps.LatLng(48.738012, 9.121616),
+				new google.maps.LatLng(48.738407, 9.121318),
+				new google.maps.LatLng(48.737503, 9.119205),
+				new google.maps.LatLng(48.737188, 9.118483),
+				new google.maps.LatLng(48.737040, 9.118030),
+				new google.maps.LatLng(48.736928, 9.117998),
+				new google.maps.LatLng(48.736776, 9.117697),
+				new google.maps.LatLng(48.738264, 9.115766)
+			],
+		strokeColor: "#FF0000",
+		strokeOpacity: 1.0,
+		strokeWeight: 2,
+		map: map
+	});
+}
+//]]>
+</script>
+
+</body>
+</html>
