@@ -613,7 +613,6 @@
                 </section>
             </section>
 
-
             <section>
                 <section>
                     <h1>CSS</h1>
@@ -1060,7 +1059,7 @@
                     <p>Blog-Software, z.B. Wordpress, um einen Feed anzubieten</p>
                     <p>Firefox für Live-Bookmarks</p>
                     <p>RSSReader (NewsRob, ...), zum on- und offline lesen</p>
-                    <p>Aggregation mehrere Newsfeeds z.B. per GoogleReader</p>
+                    <p>Aggregation mehrere Newsfeeds z.B. per Feedly oder früher (GoogleReader)</p>
                 </section>
                 <section>
                     <h2>Aufbau (Version 2.0)</h2>
@@ -1123,6 +1122,15 @@
                         Die meisten größeren Feed-Anbieter arbeiten bereits daran, das Format zu unterstützen. Der MIME-Typ von Atom ist application/atom+xml.
                     </p>
                 </section>
+
+                <section>
+                    <h3>Podcast</h3>
+                    <p>
+                        https://odee.osu.edu/resourcecenter/digital-media-production/how-write-podcast-rss-xml
+                        http://podcastgen.sourceforge.net/
+                        https://www.apple.com/itunes/podcasts/specs.html#rss
+                    </p>
+                </section>
             </section>
 
             <section>
@@ -1145,8 +1153,127 @@
                 <section>
                     <h2>Agenda</h2>
                     <ol>
-                        <li>tbd</li>
+                        <li>Koordinaten</li>
+                        <li>GPS</li>
+                        <li>Grundformen</li>
+                        <li>Beziehungen</li>
+                        <li>GeoJSON</li>
                     </ol>
+                </section>
+
+                <section>
+                    <h3>Koordinaten</h3>
+                </section>
+
+                <section>
+                    <h2>GPS</h2>
+                    <h3>Wie funktioniert GPS?</h3>
+                </section>
+
+                <section>
+                    <h3>Total einfach, oder?</h3>
+                    <p class="fragment">
+                        \begin{matrix}
+                        (x_1 - x_0)^2 + (y_1 - y_0)^2  + (z_1 - z_0)^2 = [c (t_1 - t_0)]^2 \quad (1)\\
+                        (x_2 - x_0)^2 + (y_2 - y_0)^2  + (z_2 - z_0)^2 = [c (t_2 - t_0)]^2 \quad (2)\\
+                        (x_3 - x_0)^2 + (y_3 - y_0)^2  + (z_3 - z_0)^2 = [c (t_3 - t_0)]^2 \quad (3)\\
+                        (x_4 - x_0)^2 + (y_4 - y_0)^2  + (z_4 - z_0)^2 = [c (t_4 - t_0)]^2 \quad (4)\\
+                        \end{matrix}
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Fragen wir doch jemand, der sich damit auskennt</h3>
+                    <div class="fragment">
+                        <a href="http://www.youtube.com/watch?v=v4Avr_hs4LA" target="_blank">Wie funktioniert GPS</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Zusammengefasst</h3>
+                    <ul>
+                        <li>4 Satelliten werden benötigt, wenn die Zeit unbekannt ist</li>
+                        <li>3 Satelliten wenn die Zeit bekannt ist</li>
+                        <li>Dann kann die Position trianguliert werden</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Aber</h3>
+                    <ul>
+                        <li>Die Welt ist 3D</li>
+                        <li>Genauigkeit steht und fällt mit der Anzahl der Satelliten</li>
+                        <li>Das Militär hat Einfluß auf die Genauigkeit</li>
+                        <li>Altertnativen: GLONASS und Galileo</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Grundformen</h3>
+                    <p> Einzelne shape formen (punkt, linestring, ...)</p>
+                </section>
+
+                <section>
+                    <h3>Beziehungen</h3>
+                </section>
+
+                <section>
+                    <h3>GeoJSON</h3>
+                </section>
+
+                <section>
+                    <h3>Navigation</h3>
+                </section>
+
+                <section>
+                    <h3>Geodaten in Bildern</h3>
+                    <p>Geotags in Fotos (EXIF, XMP)</p>
+                </section>
+
+                <section>
+                    <h3>Geodaten in Html</h3>
+                    <p>HTML-Einbindung (Meta-Tag, Mikroformate, RDF)</p>
+                </section>
+
+                <section>
+                    <h3>Geodaten in Javascript</h3>
+                    <p>Zugriff auf die Browser-API</p>
+                </section>
+
+                <section>
+                    <h3>Die Klassiker</h3>
+                    <p>Google Maps, Google Earth, Google Street View z.B. als Einbindung auf der Webseite</p>
+                </section>
+
+                <section>
+                    <h3>Geotagging in Anwendungen</h3>
+                    <p>Geotagging in Anwendung: z.B. Flickr, Panoramio, Wikipedia etc.</p>
+                </section>
+
+                <section>
+                    <h3>Geosuchen</h3>
+                    <p>Geotagging und Suchmaschinen => Warum ist das wichtig (Pubs in der Nähe)</p>
+                </section>
+
+                <section>
+                    <h3>Geoblogging / Social Media</h3>
+                    <p>Geoblogging und andere Social-Media-Anwendungen (Twitter, Facebook, Flickr etc</p>
+                </section>
+
+                <section>
+                    <h3>Location Based Services</h3>
+                    <p>Zusammenfassung von allem, Automatisierung je nach Standort, Taxi , ...</p>
+                </section>
+
+                <section>
+                    <h3>Die Erde ist rund...</h3>
+                    <p>Doppeldeutige Koordinaten an Grenzen</p>
+                </section>
+
+                <section>
+                    <h3>Übung: Google Map Builder</h3>
+                    <p>Erstellt einen schönen Kartenausschnitt für die SAE</p>
+                    <p><a href="http://googlemapbuilder.mynameisdonald.com/">http://googlemapbuilder.mynameisdonald.com/</a> </p>
                 </section>
             </section>
 
@@ -1172,7 +1299,7 @@
 
             <section>
                     <section>
-                        <h1>1. Definitionen</h1>
+                        <h1>Definitionen</h1>
                     </section>
 
                     <section>
@@ -1323,7 +1450,7 @@
 
             <section>
                     <section>
-                        <h1>2. Daten</h1>
+                        <h1>Daten</h1>
                     </section>
 
                     <section>
@@ -1411,7 +1538,7 @@
 
             <section>
                     <section>
-                        <h1>3. Kommunikation</h1>
+                        <h1>Kommunikation</h1>
                     </section>
 
                     <section>
@@ -1590,7 +1717,7 @@
 
             <section>
                     <section>
-                        <h1>4. OAuth</h1>
+                        <h1>OAuth</h1>
                     </section>
 
                     <section>
@@ -1677,7 +1804,7 @@
 
             <section>
                     <section>
-                        <h1>5. Die eigene API</h1>
+                        <h1>Die eigene API</h1>
                     </section>
 
                     <section>
@@ -1708,10 +1835,13 @@
 
             <section>
                 <section>
-                    <h1>6. Famous APIs</h1>
+                    <h1>Famous APIs</h1>
                 </section>
                 <section>
                     <h3>Twitter</h3>
+                    <p>
+                        Abfragen von Tweets, Suchen nach Tweets, Schreiben von Tweets, ....
+                    </p>
                     <p>
                         <a href="https://dev.twitter.com/" target="_blank">Twitter Dev Pages</a>
                     </p>
@@ -1719,29 +1849,50 @@
                         <a href="https://dev.twitter.com/docs/twitter-libraries" target="_blank">Twitter Clients</a>
                     </p>
                 </section>
+
                 <section>
                     <h3>Facebook</h3>
-                    <a href="https://developers.facebook.com/" target="_blank">Facebook Dev</a>
+                    <p>
+                        Authentifizierung, Zugriff auf Profildaten & Freunde, Posting von Artikeln, ...
+                    </p>
+                    <p>
+                        <a href="https://developers.facebook.com/" target="_blank">Facebook Dev</a>
+                    </p>
+
                 </section>
+
                 <section>
                     <h3>GoogleMaps</h3>
-                    <a href="https://developers.google.com/maps/" target="_blank">Google Maps API</a>
+                    <p>
+                        Suche nach Stichworte, Anzeige von Kartenauschnitten, Malen auf den Karten, ...
+                    </p>
+                    <p>
+                        <a href="https://developers.google.com/maps/" target="_blank">Google Maps API</a>
+                    </p>
                 </section>
+
                 <section>
                     <h3>OSM (OpenStreetMap)</h3>
+                    <p>
+                        Suche nach Stichworten, Zugriff auf versch. Karten / Kartenteile, ...
+                    </p>
+                    <p>
+                        <a href="http://wiki.openstreetmap.org/wiki/API" target="_blank">API Wiki</a>
+                    </p>
                 </section>
+
                 <section>
                     <h3>Amazon</h3>
+                    <p>
+                       Zugriff auf den Artikelstamm von Amazon, Preise, Suchen, ...
+                    </p>
                     <a href="https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html" target="_blank">Affiliate API</a>
                 </section>
             </section>
 
-
-
-
             <section>
                 <section>
-                    <h1>7. Q&A</h1>
+                    <h1>Q&A</h1>
                 </section>
 
                 <section data-state="questions">
@@ -1787,9 +1938,17 @@
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
                     { src: '/socket.io/socket.io.js', async: true },
-                    { src: 'plugin/notes-server/client.js', async: true }
-				]
-			});
+                    { src: 'plugin/notes-server/client.js', async: true },
+                    // MathJax
+                    { src: 'plugin/math/math.js', async: true }
+				],
+
+                math: {
+                    mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                }
+
+            });
         </script>
 
 	</body>
