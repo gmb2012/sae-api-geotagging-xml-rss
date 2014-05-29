@@ -227,9 +227,9 @@
                 <section>
                     <h2>Die Lösung?</h2>
                         <pre><code>
-                            Das Wort FETTSTARTfettFETTSTOP soll fett sein
+Das Wort FETTSTARTfettFETTSTOP soll fett sein
 
-                            Hier möchte ich gerneABSATZeinen Absatz haben
+Hier möchte ich gerneABSATZeinen Absatz haben
                         </code></pre>
                 </section>
                 <section>
@@ -325,18 +325,18 @@
                 <section>
                     <h2>Das erste XML Dokument</h2>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
-                            &lt;verzeichnis&gt;
-                            &lt;titel&gt;Wikipedia St&auml;dteverzeichnis&lt;/titel&gt;
-                            &lt;eintrag&gt;
-                            &lt;stichwort&gt;Genf&lt;/stichwort&gt
-                            &lt;eintragstext&gt;Genf ist der Sitz von ...&lt;/eintragstext&gt;
-                            &lt;/eintrag&gt;
-                            &lt;eintrag&gt;
-                            &lt;stichwort&gt;K&ouml;ln&lt;/stichwort&gt;
-                            &lt;eintragstext&gt;K&ouml;ln ist eine Stadt, die ...&lt;/eintragstext&gt;
-                            &lt;/eintrag&gt;
-                            &lt;/verzeichnis&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;verzeichnis&gt;
+    &lt;titel&gt;Wikipedia St&auml;dteverzeichnis&lt;/titel&gt;
+    &lt;eintrag&gt;
+        &lt;stichwort&gt;Genf&lt;/stichwort&gt
+        &lt;eintragstext&gt;Genf ist der Sitz von ...&lt;/eintragstext&gt;
+    &lt;/eintrag&gt;
+    &lt;eintrag&gt;
+        &lt;stichwort&gt;K&ouml;ln&lt;/stichwort&gt;
+        &lt;eintragstext&gt;K&ouml;ln ist eine Stadt, die ...&lt;/eintragstext&gt;
+    &lt;/eintrag&gt;
+&lt;/verzeichnis&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -344,7 +344,7 @@
                     <h3>XML-Deklaration</h3>
                     <p>Eine XML-Deklaration ist eine Erkennungszeichenfolge im Prolog einer XML-Datei</p>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -381,14 +381,14 @@
                 <section>
                     <h3>Entitätenreferenzen</h3>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
-                            &lt;!ENTITY c &quot;Chris&quot;&gt;
-                            &lt;!ENTITY chap1 SYSTEM &quot;chapter-1.xml&quot;&gt;
-                            &lt;verzeichnis&gt;
-                            &lt;titel&gt;Hallo &c;&lt;/titel&gt;
-                            &lt;!-- Pull in the chapter content: --&gt;
-                            &amp;chap1;
-                            &lt;/verzeichnis&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;!ENTITY c &quot;Chris&quot;&gt;
+&lt;!ENTITY chap1 SYSTEM &quot;chapter-1.xml&quot;&gt;
+&lt;verzeichnis&gt;
+    &lt;titel&gt;Hallo &c;&lt;/titel&gt;
+    &lt;!-- Pull in the chapter content: --&gt;
+    &amp;chap1;
+&lt;/verzeichnis&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -398,9 +398,9 @@
                         der benutzt wird, um Dokumente eines bestimmten Typs zu deklarieren.
                     </p>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
-                            &lt;!DOCTYPE hallo SYSTEM &quot;hallo.dtd&quot;&gt;
-                            &lt;hallo&gt;Hallo Welt!&lt;/hallo&gt;
+&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE hallo SYSTEM &quot;hallo.dtd&quot;&gt;
+&lt;hallo&gt;Hallo Welt!&lt;/hallo&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -414,7 +414,7 @@
                         </p>
                         <p>Eine XML-Deklaration ist keine Verarbeitungsanweisung, auch wenn sie genauso aussieht.</p>
                             <pre><code class="xml">
-                                &lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;show_book.xsl&quot;?&gt;
+&lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;show_book.xsl&quot;?&gt;
                             </code></pre>
                     </div>
                 </section>
@@ -422,8 +422,8 @@
                     <h3>Elemente</h3>
                     <p>Auszeichnung via Start- und End-Tag oder einem sog. Empty-Element-Tag</p>
                         <pre><code class="xml">
-                            &lt;Tag-Name&gt;&lt;/Tag-Name&gt;
-                            &lt;Empty-Element /&gt;
+&lt;Tag-Name&gt;&lt;/Tag-Name&gt;
+&lt;Empty-Element /&gt;
                         </code></pre>
 
                     <div class="fragment">
@@ -433,8 +433,8 @@
                             für Zusatz-Informationen über Elemente
                         </p>
                             <pre><code class="xml">
-                                &lt;Tag-Name attribute-key=&quot;attribute-value&quot;&gt;&lt;/Tag-Name&gt;
-                                &lt;Empty-Element attribute-key=&quot;attribute-value&quot; /&gt;
+&lt;Tag-Name attribute-key=&quot;attribute-value&quot;&gt;&lt;/Tag-Name&gt;
+&lt;Empty-Element attribute-key=&quot;attribute-value&quot; /&gt;
                             </code></pre>
                     </div>
                 </section>
@@ -442,7 +442,7 @@
                     <h3>Text</h3>
                     <p>Normaler Text ;) bzw. die Nutzinformation</p>
                         <pre><code class="xml">
-                            &lt;Tag-Name&gt;ganz normaler Text&lt;/Tag-Name&gt;
+&lt;Tag-Name&gt;ganz normaler Text&lt;/Tag-Name&gt;
                         </code></pre>
 
                     <div class="fragment">
@@ -452,19 +452,19 @@
                             Dieser wird nicht interpretiert und kann daher auch "illegales" XML (Tags, Sonderzeichen, ...) enthalten.
                         </p>
                             <pre><code class="xml">
-                                &lt;Tag-Name&gt;
-                                &lt;![CDATA[ Inhalt ]]&gt;
-                                &lt;/Tag-Name&gt;
-                                &lt;Tag-Name&gt;
-                                &lt;![CDATA[ Inhalt]] ]]&gt;&lt;![CDATA[ &gt;Inhalt ]]&gt;
-                                &lt;/Tag-Name&gt;
+&lt;Tag-Name&gt;
+    &lt;![CDATA[ Inhalt ]]&gt;
+    &lt;/Tag-Name&gt;
+    &lt;Tag-Name&gt;
+    &lt;![CDATA[ Inhalt]] ]]&gt;&lt;![CDATA[ &gt;Inhalt ]]&gt;
+&lt;/Tag-Name&gt;
                             </code></pre>
                     </div>
                 </section>
                 <section>
                     <h3>Kommentare</h3>
                         <pre><code class="xml">
-                            &lt;!-- Kommentar-Text --&gt;
+&lt;!-- Kommentar-Text --&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -556,24 +556,24 @@
                 <section>
                     <h3>XML-Dokument</h3>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-                            &lt;!DOCTYPE  Person SYSTEM &quot;toll.dtd&quot;&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE  Person SYSTEM &quot;toll.dtd&quot;&gt;
 
-                            &lt;Person&gt;
-                            &lt;Name&gt;Manfred M&uuml;ller&lt;/Name&gt;
-                            &lt;Kind&gt;
-                            &lt;Name&gt;Olivia M&uuml;ller&lt;/Name&gt;
-                            &lt;/Kind&gt;
-                            &lt;Kind&gt;
-                            &lt;Name&gt;Marc M&uuml;ller&lt;/Name&gt;
-                            &lt;/Kind&gt;
-                            &lt;/Person
+&lt;Person&gt;
+    &lt;Name&gt;Manfred M&uuml;ller&lt;/Name&gt;
+    &lt;Kind&gt;
+        &lt;Name&gt;Olivia M&uuml;ller&lt;/Name&gt;
+    &lt;/Kind&gt;
+    &lt;Kind&gt;
+        &lt;Name&gt;Marc M&uuml;ller&lt;/Name&gt;
+    &lt;/Kind&gt;
+&lt;/Person
                         </code></pre>
                     <h3>DTD</h3>
                         <pre><code class="xml">
-                            &lt;!ELEMENT Person (Name, Kind*)&gt;
-                            &lt;!ELEMENT Kind (Name)&gt;
-                            &lt;!ELEMENT Name (#PCDATA)&gt;
+&lt;!ELEMENT Person (Name, Kind*)&gt;
+&lt;!ELEMENT Kind (Name)&gt;
+&lt;!ELEMENT Name (#PCDATA)&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -598,23 +598,23 @@
                 <section>
                     <h3>XML-Dokument</h3>
                         <pre><code class="xml">
-                            ...
-                            &lt;pc-Typ&gt;
-                            &lt;name&gt;Ein Name, aber Element ist optional&lt;/name&gt;
-                            &lt;hersteller&gt;Ein Hersteller, aber Element ist optional&lt;/hersteller&gt;
-                            &lt;id&gt;123&lt;/id&gt;
-                            &lt;/pc-Typ&gt;
-                            ...
+...
+&lt;pc-Typ&gt;
+    &lt;name&gt;Ein Name, aber Element ist optional&lt;/name&gt;
+    &lt;hersteller&gt;Ein Hersteller, aber Element ist optional&lt;/hersteller&gt;
+    &lt;id&gt;123&lt;/id&gt;
+&lt;/pc-Typ&gt;
+...
                         </code></pre>
                     <h3>XSD</h3>
                         <pre><code class="xml">
-                            &lt;xsd:complexType name=&quot;pc-Typ&quot;&gt;
-                            &lt;xsd:sequence&gt;
-                            &lt;xsd:element name=&quot;name&quot; type=&quot;xsd:string&quot;/&gt;
-                            &lt;xsd:element name=&quot;hersteller&quot; type=&quot;xsd:string&quot;/&gt;
-                            &lt;/xsd:sequence&gt;
-                            &lt;xsd:attribute name=&quot;id&quot; type=&quot;xsd:integer&quot;/&gt;
-                            &lt;/xsd:complexType&gt;
+&lt;xsd:complexType name=&quot;pc-Typ&quot;&gt;
+    &lt;xsd:sequence&gt;
+        &lt;xsd:element name=&quot;name&quot; type=&quot;xsd:string&quot;/&gt;
+        &lt;xsd:element name=&quot;hersteller&quot; type=&quot;xsd:string&quot;/&gt;
+    &lt;/xsd:sequence&gt;
+    &lt;xsd:attribute name=&quot;id&quot; type=&quot;xsd:integer&quot;/&gt;
+&lt;/xsd:complexType&gt;
                         </code></pre>
                 </section>
             </section>
@@ -638,39 +638,39 @@
                 <section>
                     <h3>XML-Dokument</h3>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
-                            &lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;cd_catalog.css&quot;?&gt;
-                            &lt;CATALOG&gt;
-                            &lt;CD&gt;
-                            &lt;TITLE&gt;Empire Burlesque&lt;/TITLE&gt;
-                            &lt;ARTIST&gt;Bob Dylan&lt;/ARTIST&gt;
-                            &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
-                            &lt;COMPANY&gt;Columbia&lt;/COMPANY&gt;
-                            &lt;PRICE&gt;10.90&lt;/PRICE&gt;
-                            &lt;YEAR&gt;1985&lt;/YEAR&gt;
-                            &lt;/CD&gt;
-                            .
-                            .
-                            .
-                            &lt;/CATALOG&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;cd_catalog.css&quot;?&gt;
+&lt;CATALOG&gt;
+    &lt;CD&gt;
+        &lt;TITLE&gt;Empire Burlesque&lt;/TITLE&gt;
+        &lt;ARTIST&gt;Bob Dylan&lt;/ARTIST&gt;
+        &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+        &lt;COMPANY&gt;Columbia&lt;/COMPANY&gt;
+        &lt;PRICE&gt;10.90&lt;/PRICE&gt;
+        &lt;YEAR&gt;1985&lt;/YEAR&gt;
+    &lt;/CD&gt;
+    .
+    .
+    .
+&lt;/CATALOG&gt;
                         </code></pre>
                 </section>
                 <section>
                     <h3>CSS-Datei</h3>
                         <pre><code class="css">
-                            CATALOG {
-                            background-color: #ffffff;
-                            width: 100%;
-                            }
-                            CD {
-                            display: block;
-                            margin-bottom: 30pt;
-                            margin-left: 0;
-                            }
-                            TITLE {
-                            color: #FF0000;
-                            font-size: 20pt;
-                            }
+CATALOG {
+    background-color: #ffffff;
+    width: 100%;
+}
+CD {
+    display: block;
+    margin-bottom: 30pt;
+    margin-left: 0;
+}
+TITLE {
+    color: #FF0000;
+    font-size: 20pt;
+}
                         </code></pre>
                 </section>
             </section>
@@ -693,21 +693,21 @@
                 <section>
                     <h3>XML-Dokument</h3>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-                            &lt;dok&gt;
-                            &lt;kap title=&quot;Nettes Kapitel&quot;&gt;
-                            &lt;pa&gt;Ein Absatz&lt;/pa&gt;
-                            &lt;pa&gt;Noch ein Absatz&lt;/pa&gt;
-                            &lt;pa&gt;Und noch ein Absatz&lt;/pa&gt;
-                            &lt;pa&gt;Nett, oder?&lt;/pa&gt;
-                            &lt;/kap&gt;
-                            &lt;kap title=&quot;Zweites Kapitel&quot;&gt;
-                            &lt;pa&gt;Ein Absatz&lt;/pa&gt;
-                            &lt;pa format=&quot;bold&quot;&gt;Erste Zeile&lt;/pa&gt;
-                            &lt;pa format=&quot;bold&quot;&gt;Zweite Zeile&lt;/pa&gt;
-                            &lt;pa format=&quot;italic&quot;&gt;Dritte Zeile&lt;/pa&gt;
-                            &lt;/kap&gt;
-                            &lt;/dok&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
+&lt;dok&gt;
+    &lt;kap title=&quot;Nettes Kapitel&quot;&gt;
+        &lt;pa&gt;Ein Absatz&lt;/pa&gt;
+        &lt;pa&gt;Noch ein Absatz&lt;/pa&gt;
+        &lt;pa&gt;Und noch ein Absatz&lt;/pa&gt;
+        &lt;pa&gt;Nett, oder?&lt;/pa&gt;
+    &lt;/kap&gt;
+    &lt;kap title=&quot;Zweites Kapitel&quot;&gt;
+        &lt;pa&gt;Ein Absatz&lt;/pa&gt;
+        &lt;pa format=&quot;bold&quot;&gt;Erste Zeile&lt;/pa&gt;
+        &lt;pa format=&quot;bold&quot;&gt;Zweite Zeile&lt;/pa&gt;
+        &lt;pa format=&quot;italic&quot;&gt;Dritte Zeile&lt;/pa&gt;
+    &lt;/kap&gt;
+&lt;/dok&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -831,37 +831,37 @@
                 <section>
                     <h3>XML-Dokument</h3>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
-                            &lt;catalog&gt;
-                            &lt;cd&gt;
-                            &lt;title&gt;Empire Burlesque&lt;/title&gt;
-                            &lt;artist&gt;Bob Dylan&lt;/artist&gt;
-                            &lt;country&gt;USA&lt;/country&gt;
-                            &lt;company&gt;Columbia&lt;/company&gt;
-                            &lt;price&gt;10.90&lt;/price&gt;
-                            &lt;year&gt;1985&lt;/year&gt;
-                            &lt;/cd&gt;
-                            ...
-                            &lt;/catalog&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;catalog&gt;
+    &lt;cd&gt;
+        &lt;title&gt;Empire Burlesque&lt;/title&gt;
+        &lt;artist&gt;Bob Dylan&lt;/artist&gt;
+        &lt;country&gt;USA&lt;/country&gt;
+        &lt;company&gt;Columbia&lt;/company&gt;
+        &lt;price&gt;10.90&lt;/price&gt;
+        &lt;year&gt;1985&lt;/year&gt;
+    &lt;/cd&gt;
+    ...
+&lt;/catalog&gt;
                         </code></pre>
                 </section>
                 <section>
                     <h3>XSLT-Stylesheet</h3>
                     <pre><code class="xml">
-                        &lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
-                        &lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
-                        &lt;xsl:template match=&quot;/&quot;&gt;
-                        &lt;html&gt;&lt;body&gt;
-                        &lt;h2&gt;My CD Collection&lt;/h2&gt;
-                        &lt;table border=&quot;1&quot;&gt;
-                        &lt;tr bgcolor=&quot;#9acd32&quot;&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Artist&lt;/th&gt;&lt;/tr&gt;
-                        &lt;xsl:for-each select=&quot;catalog/cd&quot;&gt;
-                        &lt;tr&gt;&lt;td&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/td&gt;&lt;td&gt;&lt;xsl:value-of select=&quot;artist&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
-                        &lt;/xsl:for-each&gt;
-                        &lt;/table&gt;
-                        &lt;/body&gt;&lt;/html&gt;
-                        &lt;/xsl:template&gt;
-                        &lt;/xsl:stylesheet&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+    &lt;xsl:template match=&quot;/&quot;&gt;
+        &lt;html&gt;&lt;body&gt;
+        &lt;h2&gt;My CD Collection&lt;/h2&gt;
+        &lt;table border=&quot;1&quot;&gt;
+        &lt;tr bgcolor=&quot;#9acd32&quot;&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Artist&lt;/th&gt;&lt;/tr&gt;
+        &lt;xsl:for-each select=&quot;catalog/cd&quot;&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/td&gt;&lt;td&gt;&lt;xsl:value-of select=&quot;artist&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;/xsl:for-each&gt;
+        &lt;/table&gt;
+        &lt;/body&gt;&lt;/html&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
                     </code></pre>
                 </section>
             </section>
@@ -881,16 +881,13 @@
                 </section>
                 <section>
                         <pre><code class="xml">
-                            &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
-                            xmlns:svg=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:svg=&quot;http://www.w3.org/2000/svg&quot;&gt;
+...
+&lt;p&gt;Und noch ein kleines Bild dazu:&lt;/p&gt;
 
-                            ...
-
-                            &lt;p&gt;Und noch ein kleines Bild dazu:&lt;/p&gt;
-
-                            &lt;svg:svg&gt;
-                            &lt;svg:rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;1&quot;  height=&quot;1&quot; /&gt;
-                            &lt;/svg:svg&gt;
+&lt;svg:svg&gt;
+    &lt;svg:rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;1&quot;  height=&quot;1&quot; /&gt;
+&lt;/svg:svg&gt;
                         </code></pre>
                 </section>
             </section>
@@ -1026,9 +1023,9 @@
                     <p>
                         Vollständige Kopfdaten:
                             <pre><code class="xml">
-                                &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
-                                &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;
-                                &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;de&quot;&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;de&quot;&gt;
                             </code></pre>
                     </p>
                 </section>
@@ -1070,33 +1067,33 @@
                 <section>
                     <h2>Aufbau (Version 2.0)</h2>
                         <pre><code class="xml">
-                            &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-                            &lt;rss version=&quot;2.0&quot;&gt;
-                            &lt;channel&gt;
-                            &lt;title&gt;Titel des Feeds&lt;/title&gt;
-                            &lt;link&gt;URL der Webpr&auml;senz&lt;/link&gt;
-                            &lt;description&gt;Kurze Beschreibung des Feeds&lt;/description&gt;
-                            &lt;language&gt;Sprache des Feeds (z. B. &quot;de-de&quot;)&lt;/language&gt;
-                            &lt;copyright&gt;Autor des Feeds&lt;/copyright&gt;
-                            &lt;pubDate&gt;Erstellungsdatum(&quot;Tue, 8 Jul 2008 2:43:19&quot;)&lt;/pubDate&gt;
-                            &lt;image&gt;
-                            &lt;url&gt;URL einer einzubindenden Grafik&lt;/url&gt;
-                            &lt;title&gt;Bildtitel&lt;/title&gt;
-                            &lt;link&gt;URL, mit der das Bild verkn&uuml;pft ist&lt;/link&gt;
-                            &lt;/image&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+    &lt;channel&gt;
+        &lt;title&gt;Titel des Feeds&lt;/title&gt;
+        &lt;link&gt;URL der Webpr&auml;senz&lt;/link&gt;
+        &lt;description&gt;Kurze Beschreibung des Feeds&lt;/description&gt;
+        &lt;language&gt;Sprache des Feeds (z. B. &quot;de-de&quot;)&lt;/language&gt;
+        &lt;copyright&gt;Autor des Feeds&lt;/copyright&gt;
+        &lt;pubDate&gt;Erstellungsdatum(&quot;Tue, 8 Jul 2008 2:43:19&quot;)&lt;/pubDate&gt;
+        &lt;image&gt;
+            &lt;url&gt;URL einer einzubindenden Grafik&lt;/url&gt;
+            &lt;title&gt;Bildtitel&lt;/title&gt;
+            &lt;link&gt;URL, mit der das Bild verkn&uuml;pft ist&lt;/link&gt;
+        &lt;/image&gt;
 
-                            &lt;item&gt;
-                            &lt;title&gt;Titel des Eintrags&lt;/title&gt;
-                            &lt;description&gt;Kurze Zusammenfassung des Eintrags&lt;/description&gt;
-                            &lt;link&gt;Link zum vollst&auml;ndigen Eintrag&lt;/link&gt;
-                            &lt;author&gt;Autor des Artikels, E-Mail-Adresse&lt;/author&gt;
-                            &lt;guid&gt;Eindeutige Identifikation des Eintrages&lt;/guid&gt;
-                            &lt;pubDate&gt;Datum des Items&lt;/pubDate&gt;
-                            &lt;/item&gt;
+        &lt;item&gt;
+            &lt;title&gt;Titel des Eintrags&lt;/title&gt;
+            &lt;description&gt;Kurze Zusammenfassung des Eintrags&lt;/description&gt;
+            &lt;link&gt;Link zum vollst&auml;ndigen Eintrag&lt;/link&gt;
+            &lt;author&gt;Autor des Artikels, E-Mail-Adresse&lt;/author&gt;
+            &lt;guid&gt;Eindeutige Identifikation des Eintrages&lt;/guid&gt;
+            &lt;pubDate&gt;Datum des Items&lt;/pubDate&gt;
+        &lt;/item&gt;
 
-                            &lt;item&gt;...&lt;/item&gt;
-                            &lt;/channel&gt;
-                            &lt;/rss&gt;
+        &lt;item&gt;...&lt;/item&gt;
+    &lt;/channel&gt;
+&lt;/rss&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -1109,8 +1106,7 @@
                         Beispielsweise wird in der Adress- oder Statusleiste des Browser-Fensters eine RSS-Schaltfläche angezeigt.
                     </p>
                         <pre><code class="xml">
-                            &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot;
-                            title=&quot;RSS&quot; href=&quot;http://www.example.net/feed.rss&quot; /&gt;
+&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;RSS&quot; href=&quot;http://www.example.net/feed.rss&quot; /&gt;
                         </code></pre>
                 </section>
                 <section>
@@ -1394,30 +1390,98 @@
                         <li>Die Welt ist 3D</li>
                         <li>Genauigkeit steht und fällt mit der Anzahl der Satelliten</li>
                         <li>Das Militär hat Einfluß auf die Genauigkeit</li>
-                        <li>Altertnativen: GLONASS und Galileo</li>
+                        <li>Alternativen: GLONASS und Galileo</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Grundformen</h2>
-                    <p> Einzelne shape formen (punkt, linestring, ...)</p>
+                    <p>
+                        Alle existierenden zu verortenden Elemente lassen sich mit folgenden Grundformen abbilden:
+                    </p>
+                    <ul class="fragment">
+                        <li>Punkt</li>
+                        <li>Multi-Punkt</li>
+                        <li>Linie</li>
+                        <li>Multi-Linie</li>
+                        <li>Fläche / Polygon</li>
+                        <li>Multi-Polygon</li>
+                    </ul>
                 </section>
 
                 <section>
                     <h2>Beziehungen</h2>
+                    <p>
+                        Zwischen den Grundformen existieren folgende Beziehungen:
+                    </p>
+                    <ul class="fragment">
+                        <li>A ist unabhängig von B</li>
+                        <li>A berührt B</li>
+                        <li>A enthält B</li>
+                        <li>A schneidet B</li>
+                        <li>A befindet sich innerhalb von B</li>
+                    </ul>
                 </section>
 
                 <section>
                     <h2>GeoJSON</h2>
+                    <p>
+                        GeoJSON ist ein offener Standard, um geometrische Formen als JSON darzustellen und wird in vielen Anwendungen und dem Internet benutzt.
+                    </p>
+                    <pre><code class="javascript">{
+    "type": "Point",
+    "coordinates": [30, 10]
+}
+{
+    "type": "LineString",
+    "coordinates": [[30, 10], [10, 30], [40, 40]]
+}
+{
+    "type": "Polygon",
+    "coordinates": [[[35, 10], [45, 45], [15, 40], [10, 20], [35, 10]], [[20, 30], [35, 35], [30, 20], [20, 30]]]
+}
+{
+    "type": "MultiPoint",
+    "coordinates": [[10, 40], [40, 30], [20, 20], [30, 10]]
+}</code></pre>
                 </section>
 
                 <section>
                     <h2>Navigation</h2>
+                    <p>
+                        Ein Navigationssystem ist ein technisches System, das mit Hilfe von Positionsbestimmung (Satellit, Funk, GSM bzw. inertes oder autonomes System) und
+                        Geoinformationen (Topologie-, Straßen-, Luft- oder Seekarten) eine Zielführung zu einem gewählten Ort oder eine Route unter Beachtung gewünschter
+                        Kriterien ermöglicht.
+                    </p>
+                    <p>
+                        Neben der Bestimmung der Position wird hier ein Computersystem benötigt, welches in der Lage ist, den kürzesten Pfad zu berechnen.
+                    </p>
+                    <p>
+                        Zusatzanwendungen für Navigationssysteme:
+                        <ul>
+                            <li>TMC oder TMCpro</li>
+                            <li>POIs</li>
+                            <li>Multimedia-Anwendungen</li>
+                            <li>Geocaching</li>
+                        </ul>
+                    </p>
                 </section>
 
                 <section>
-                    <h2>Geodaten in Bildern</h2>
-                    <p>Geotags in Fotos (EXIF, XMP)</p>
+                    <h2>Geodaten in Bildern / Videos</h2>
+                    <p>
+                        Unter Geotagging, auch Geocoding oder Geo-Imaging, versteht man bei fotografischen Aufnahmen die Zuordnung von geographischen Koordinaten.
+                        Als Punkte in einer elektronischen Karte lassen sich die so georeferenzierten Bilder anschließend leichter suchen und auswählen.
+                    </p>
+                    <p>
+                        Eingesetzt wird die Foto-Verortung in der Raumplanung und dem Tourismus, der Umweltplanung, dem Verkehr und dem Katastrophenschutz.
+                        Ein häufiges und gängiges Anwendungsbeispiel ist das zeitsparende Illustrieren eines in einem Stadtplan festgelegten Stadtrundganges
+                        mit Bildern von sehenswerten Baudenkmälern
+                    </p>
+                    <p>
+                        Die Geodaten lassen sich mit einer GPS-fähigen Kamera direkt bei der Aufnahme oder nachträglich in den
+                        Metadaten der Bilder (EXIF, XMP, IPTC) speichern
+                    </p>
                     <p>
                         <a href="http://www.binarus.de/articles/reverse-geotagging/reverse-geotagging.shtml" target="_blank">http://www.binarus.de/articles/reverse-geotagging/reverse-geotagging.shtml</a>
                     </p>
@@ -1425,42 +1489,80 @@
 
                 <section>
                     <h2>Geodaten in Html</h2>
-                    <p>HTML-Einbindung (Meta-Tag, Mikroformate, RDF)</p>
+                    <p>
+                        Als Metatag zur Verortung von Angeboten, z.B. einer Firmenwebseite
+                    </p>
+                    <pre><code class="javascript">
+&lt;meta name=&quot;geo.region&quot; content=&quot;DE-BW&quot; /&gt;
+&lt;meta name=&quot;geo.placename&quot; content=&quot;Stuttgart&quot; /&gt;
+&lt;meta name=&quot;geo.position&quot; content=&quot;51.165691;10.451526&quot; /&gt;
+&lt;meta name=&quot;ICBM&quot; content=&quot;51.165691, 10.451526&quot; /&gt;
+                    </code></pre>
+                    <p>
+                        Als Geo Mikroformat zum Auslesen aus Webseiten
+                    </p>
+                    <pre><code class="javascript">
+&lt;span class=&quot;geo&quot;&gt;
+    &lt;span class=&quot;latitude&quot;&gt;50.167958&lt;/span&gt;;
+    &lt;span class=&quot;longitude&quot;&gt;-97.133185&lt;/span&gt;
+&lt;/span&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Geodaten in Html</h2>
+                    <p>
+                       Als RDF Metadaten für das semantische Web
+                    </p>
+                    <pre><code class="javascript">
+&lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; xmlns:geo=&quot;http://www.w3.org/2003/01/geo/wgs84_pos#&quot;&gt; &lt;geo:Point&gt; &lt;geo:lat&gt;55.701&lt;/geo:lat&gt; &lt;geo:long&gt;12.552&lt;/geo:long&gt; &lt;/geo:Point&gt; &lt;/rdf:RDF&gt;
+                    </code></pre>
                 </section>
 
                 <section>
                     <h2>Geodaten in Javascript</h2>
-                    <p>Zugriff auf die Browser-API</p>
+                    <p>Zugriff über die Browser-API auf den Standort des Benutzers</p>
+                    <p> <a href="stuff/js_geotagging/geolocation.html" target="_blank">So sieht es aus...</a></p>
                 </section>
 
                 <section>
-                    <h2>Die Klassiker</h2>
-                    <p>Google Maps, Google Earth, Google Street View z.B. als Einbindung auf der Webseite</p>
-                </section>
-
-                <section>
-                    <h2>Geotagging in Anwendungen</h2>
-                    <p>Geotagging in Anwendung: z.B. Flickr, Panoramio, Wikipedia etc.</p>
-                </section>
-
-                <section>
-                    <h2>Geosuchen</h2>
-                    <p>Geotagging und Suchmaschinen => Warum ist das wichtig (Pubs in der Nähe)</p>
-                </section>
-
-                <section>
-                    <h2>Geoblogging / Social Media</h2>
-                    <p>Geoblogging und andere Social-Media-Anwendungen (Twitter, Facebook, Flickr etc</p>
+                    <h2>Anwendungen</h2>
+                    <ul>
+                        <li>Google Maps, Google Earth, Google Street View<br/>Einbinden auf der Webseite</li>
+                        <li>SMS, Hangout, Whatsapp, ...<br/>Versand des aktuellen Standorts</li>
+                        <li>Flickr, Panoramio, ... <br/>Anzeigen wo Bilder aufgenommen wurden</li>
+                        <li>Wikipedia <br/>Auffinden von Artikeln über eine Karte</li>
+                        <li>Google, Bing, ... <br/>Relevante (nahe) Suchergebnisse werden bevorzugt angezeigt (Pubs in der Nähe)</li>
+                        <li>Geoblogging / Social Media <br/>Bezug des veröffentlichten Inhalts zu einem Standort</li>
+                    </ul>
+                    <p></p>
                 </section>
 
                 <section>
                     <h2>Location Based Services</h2>
-                    <p>Zusammenfassung von allem, Automatisierung je nach Standort, Taxi , ...</p>
+                    <p>
+                        Standortbezogene Dienste (engl. Location-based Services (LBS), auch: Location Dependent Services (LDS))
+                        sind mobile Dienste, die unter Zuhilfenahme von positionsabhängigen Daten dem Endbenutzer selektive Informationen bereitstellen oder
+                        Dienste anderer Art erbringen.
+                    </p>
+                    <ul>
+                        <li>Interessante Orte in der Nähe, Point of Interest (POI)</li>
+                        <li>Wo bin ich / meine Freunde</li>
+                        <li>Verlässt mein Kind den Zielkorridor</li>
+                        <li>Reisezeitvorhersage (durch Gruppentracing- und Häufungsanalysen)</li>
+                        <li>Mobile Arbeitszeiterfassung</li>
+                        <li>Ortsbezogene Spiele, Schnitzeljagd online</li>
+                        <li>Ortsbezogene Werbung und Kommunikation</li>
+                        <li>Industrielle, vom Ort abhängige Prozesssteuerungen</li>
+                        <li>...</li>
+                    </ul>
                 </section>
 
                 <section>
                     <h2>Die Erde ist rund...</h2>
-                    <p>Doppeldeutige Koordinaten an Grenzen</p>
+                    <h3>Aber die Koordinaten haben Grenzen</h3>
+                    <h3>Was passiert als z.B. mit einem Polygon, dass über diese Grenze ragt?</h3>
+                    <p class="fragment">Meist wird ein solches in mehrere geteilt</p>
                 </section>
 
                 <section>

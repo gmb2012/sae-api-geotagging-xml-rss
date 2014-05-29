@@ -1,2 +1,2 @@
-- Inhalte
 - Schauen ob die Übungen noch gehen
+- Code Format für die XML Beispiele
