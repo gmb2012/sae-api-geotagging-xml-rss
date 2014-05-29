@@ -46,6 +46,11 @@
                 background-image: url("images/tafel.jpg");
                 background-size:120% ;
             }
+
+            .transformers .reveal .state-background {
+                background-image: url("images/transformers.jpg");
+                background-size:120%  ;
+            }
         </style>
 
     </head>
@@ -123,7 +128,7 @@
                         Börsennotiert über Tomorrow Focus AG<br />
                         Existiert seit 1999<br />
                         Ausgründungen in mehreren europäischen Ländern<br />
-                        Über 300 Mitarbeiter<br />
+                        Über 330 Mitarbeiter<br />
                     </p>
                 </section>
 
@@ -183,6 +188,7 @@
                         <li>Einsatzgebiete</li>
                         <li>XHTML</li>
                         <li>RSS</li>
+                        <li>Podcasts</li>
                         <li>Übung RSS</li>
                     </ol>
                 </section>
@@ -1122,13 +1128,123 @@
                         Die meisten größeren Feed-Anbieter arbeiten bereits daran, das Format zu unterstützen. Der MIME-Typ von Atom ist application/atom+xml.
                     </p>
                 </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Podcasts</h1>
+                </section>
 
                 <section>
-                    <h3>Podcast</h3>
+                    <h2>Was ist ein Podcast?</h2>
+                    <p class="fragment">
+                        Podcasting bezeichnet das Anbieten abonnierbarer Mediendateien (Audio oder Video) über das Internet.
+                        Das Kofferwort setzt sich zusammen aus der englischen Rundfunkbezeichnung Broadcasting und der Bezeichnung für
+                        bestimmte tragbare MP3-Spieler, iPod, mit deren Erfolg Podcasts direkt verbunden sind und die heute stellvertretend für
+                        jegliche tragbare MP3-Spieler stehen. Ein einzelner Podcast besteht aus einer Serie von Medienbeiträgen (Episoden),
+                        die über einen News Feed (meistens RSS) automatisch bezogen werden können.
+                        Alternativ sind Podcasts auch unter dem markenneutralen Begriff Netcast bekannt.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Woraus besteht Podcast?</h2>
+                    <p class="fragment">
+                        Ein Podcast besteht aus einer Reihe von Medien-Dateien (Audio / Video / Text) und einer XML-Meta-Datei, die diese referenziert.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Podcast-XML</h2>
+                    <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;rss xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot; xmlns:itunesu=&quot;http://www.itunesu.com/feed&quot; version=&quot;2.0&quot;&gt;
+    &lt;channel&gt;
+        &lt;link&gt;http://www.YourSite.com&lt;/link&gt;
+        &lt;language&gt;en-us&lt;/language&gt;
+        &lt;copyright&gt;&amp;#xA9;2013&lt;/copyright&gt;
+        &lt;webMaster&gt;your@email.com (Your Name)&lt;/webMaster&gt;
+        &lt;managingEditor&gt;your@email.com (Your Name)&lt;/managingEditor&gt;
+        &lt;image&gt;
+            &lt;url&gt;http://www.YourSite.com/ImageSize300X300.jpg&lt;/url&gt;
+            &lt;title&gt;Title or description of your logo&lt;/title&gt;
+            &lt;link&gt;http://www.YourSite.com&lt;/link&gt;
+        &lt;/image&gt;
+        &lt;itunes:owner&gt;
+            &lt;itunes:name&gt;Your Name&lt;/itunes:name&gt;
+            &lt;itunes:email&gt;your@email.com&lt;/itunes:email&gt;
+        &lt;/itunes:owner&gt;
+            &lt;itunes:category text=&quot;Education&quot;&gt;
+            &lt;itunes:category text=&quot;Higher Education&quot; /&gt;
+        &lt;/itunes:category&gt;
+        &lt;itunes:keywords&gt;separate, by, comma, and, space&lt;/itunes:keywords&gt;
+        &lt;itunes:explicit&gt;no&lt;/itunes:explicit&gt;
+        &lt;itunes:image href=&quot;http://www.YourSite.com/ImageSize300X300.jpg&quot; /&gt;
+        &lt;atom:link href=&quot;http://www.YourSite.com/feed.xml&quot; rel=&quot;self&quot; type=&quot;application/rss+xml&quot; /&gt;
+        &lt;pubDate&gt;Sun, 01 Jan 2012 00:00:00 EST&lt;/pubDate&gt;
+        &lt;title&gt;Verbose title of the podcast&lt;/title&gt;
+        &lt;itunes:author&gt;College, school, or department owning the podcast&lt;/itunes:author&gt;
+        &lt;description&gt;Verbose description of the podcast.&lt;/description&gt;
+        &lt;itunes:summary&gt;Duplicate of above verbose description.&lt;/itunes:summary&gt;
+        &lt;itunes:subtitle&gt;Short description of the podcast - 255 character max.&lt;/itunes:subtitle&gt;
+        &lt;lastBuildDate&gt;Thu, 02 Feb 2012 00:00:00 EST&lt;/lastBuildDate&gt;
+        &lt;item&gt;
+            &lt;title&gt;Verbose title of the newer episode&lt;/title&gt;
+            &lt;description&gt;Verbose description of the episode.&lt;/description&gt;
+            &lt;itunes:summary&gt;Duplicate of above verbose description.&lt;/itunes:summary&gt;
+            &lt;itunes:subtitle&gt;Short description of the episode - 255 character max.&lt;/itunes:subtitle&gt;
+            &lt;itunesu:category itunesu:code=&quot;112&quot; /&gt;
+            &lt;enclosure url=&quot;http://www.YourSite.com/FILE.EXT&quot; type=&quot;audio/mpeg&quot; length=&quot;1&quot; /&gt;
+            &lt;guid&gt;http://www.YourSite.com/FILE.EXT&lt;/guid&gt;
+            &lt;itunes:duration&gt;H:MM:SS&lt;/itunes:duration&gt;
+            &lt;pubDate&gt;Thu, 04 Feb 2012 00:00:00 EST&lt;/pubDate&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+            &lt;title&gt;Verbose title of the episode&lt;/title&gt;
+            &lt;description&gt;Verbose description of the episode.&lt;/description&gt;
+            &lt;itunes:summary&gt;Duplicate of above verbose description.&lt;/itunes:summary&gt;
+            &lt;itunes:subtitle&gt;Short description of the episode - 255 character max.&lt;/itunes:subtitle&gt;
+            &lt;itunesu:category itunesu:code=&quot;112&quot; /&gt;
+            &lt;enclosure url=&quot;http://www.YourSite.com/FILE.EXT&quot; type=&quot;audio/mpeg&quot; length=&quot;1&quot; /&gt;
+            &lt;guid&gt;http://www.YourSite.com/FILE.EXT&lt;/guid&gt;
+            &lt;itunes:duration&gt;H:MM:SS&lt;/itunes:duration&gt;
+            &lt;pubDate&gt;Thu, 02 Feb 2012 00:00:00 EST&lt;/pubDate&gt;
+        &lt;/item&gt;
+    &lt;/channel&gt;
+&lt;/rss&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Die einzelnen Episoden werden mit den item-Tags beschrieben</h3>
+                </section>
+
+                <section>
+                    <h2>Tools</h2>
                     <p>
-                        https://odee.osu.edu/resourcecenter/digital-media-production/how-write-podcast-rss-xml
-                        http://podcastgen.sourceforge.net/
-                        https://www.apple.com/itunes/podcasts/specs.html#rss
+                        Natürlich muss man nicht zwingend das XML selber schreiben, sondern kann das erledigen lassen.
+                        Z.B. durch <a href="http://podcastgen.sourceforge.net/" target="_blank">Podcast Generator</a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Der eigene Podcast</h2>
+                    <ol>
+                        <li>Erstelle deine erste Episode in den Formaten: .m4a, .mp3, .mov, .mp4, .m4v, .pdf, and .epub</li>
+                        <li>
+                            Erstelle einen RSS Feed, der deinen Podcast beschreibt.<br />
+                            Dieser muss valides RSS 2.0 sein, die empfohlenen iTunes RSS Tags enthalten und auf deine Episode verweisen.
+                        </li>
+                        <li>Erstelle ein Cover in der Größe 1400 x 1400 Pixel als JPG oder PNG.</li>
+                        <li>Lege die Dateien auf einem öffentlichen Server mit Streaming-Support (byte-range support) ab.</li>
+                        <li>Veröffentliche die URL deines Podcasts bei iTunes (durchläuft einen Freigabeprozess)</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Mehr Infos</h2>
+                    <p>
+                        <a href="https://www.apple.com/itunes/podcasts/specs.html" target="_blank">https://www.apple.com/itunes/podcasts/specs.html</a><br />
+                        <a href="https://odee.osu.edu/resourcecenter/digital-media-production/how-write-podcast-rss-xml" target="_blank">https://odee.osu.edu/resourcecenter/digital-media-production/how-write-podcast-rss-xml</a>
                     </p>
                 </section>
             </section>
@@ -1153,6 +1269,8 @@
                 <section>
                     <h2>Agenda</h2>
                     <ol>
+                        <li>Definition</li>
+                        <li>Allgemeines</li>
                         <li>Koordinaten</li>
                         <li>GPS</li>
                         <li>Grundformen</li>
@@ -1162,7 +1280,79 @@
                 </section>
 
                 <section>
-                    <h3>Koordinaten</h3>
+                    <h2>Definition</h2>
+                    <p>
+                        Unter dem Vorgang der Georeferenzierung, Geokodierung, Geotagging oder Verortung versteht man die Zuweisung raumbezogener
+                        Informationen, der Georeferenz, zu einem Datensatz. Der Vorgang spielt eine wichtige Rolle in der Computerkartografie,
+                        Fernerkundung und bei Geoinformationssystemen, kommt aber auch Heimanwendungen vor, z. B. der Archivierung von Fotos und Videos.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Warum???</h2>
+                    <h3 class="fragment">
+                        Daten (Bilder, Videos, ...) bekommen durch Geodaten eine neue Dimension, lassen sich genauer zuordnen und anders interpretieren.
+                        Z.B. eine Reiseroute lässt sich nachvollziehen und anzeigen.
+                    </h3>
+                </section>
+
+                <section>
+                    <h2>Allgemeines</h2>
+                    <p>
+                        Es gibt im Wesentlichen drei mögliche Gründe, warum man eine Georeferenzierung durchführen möchte:
+                        <ul>
+                            <li>Man möchte Daten in ein geodätisches Referenzsystem einpassen, d.h. mit Realweltkoordinaten versehen (geokodieren).</li>
+                            <li>Man möchte geometrische Verzerrungen in Datensätzen, insbesondere in Bilddaten, eliminieren (rektifizieren).</li>
+                            <li>Man möchte zwei unterschiedlich orientierte bzw. skalierte Datensätze aneinander anpassen (transformieren).</li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Arten</h2>
+                    <p>Folgende Arten der Georeferenzierung sind zu unterscheiden:</p>
+                    <ul>
+                        <li>die Zuweisung einer Postanschrift (Adresskodierung)</li>
+                        <li>die Zuweisung einer Koordinate (Geokodierung, Geocoding, Geotagging, Geo-Imaging)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Adresskodierung</h2>
+                    <p>
+                        Bei der Adresskodierung wird dem raumbezogenen Datensatz eine Postanschrift zugewiesen und damit ein indirekter Raumbezug geschaffen.
+                        Mithilfe geokodierter Adressen (das sind Punkte, die sowohl Postanschrift als auch Realweltkoordinaten tragen)
+                        lässt sich der direkte Raumbezug der Daten herstellen (Daten ↔ Adresse ↔ Koordinate).
+                        Adresspunktdatensätze werden unter anderem von der Katasterverwaltung oder von Navigationsdatensatzherstellern erstellt.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Geotagging (Geocoding)</h2>
+                    <p>
+                        Beim Geotagging wird ein raumbezogener Datensatz (z. B. ein Bild, eine Webseite, ein Artikel) mit einer Koordinate versehen.
+                        Die Koordinate wird als Tag, Attribut bzw. Metainformation beigefügt. Sie ermöglicht die räumliche Einordnung der Information.
+                        Die Daten lassen sich so zum Beispiel in einer digitalen Karte (wie z. B. Google Earth) an der richtigen Stelle platzieren.
+                        Im Internet haben sich hierfür die Begriffe Geotagging und Geocoding verbreitet.
+                        Das beigefügte Attribut wird entsprechend Geotag oder Geocode genannt. Für die Geokodierung von Webseiten gibt es in HTML
+                        z. B. das Meta-Element geo.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Koordinaten</h2>
+                    <p>
+                        Mit den geographischen Koordinaten (geographische Breite und geographische Länge) lässt sich die Lage eines Punktes auf der Erde beschreiben.
+                        Die Erde wird dabei in 360 Längengrade und 180 Breitengrade aufgeteilt. Längengrade verlaufen durch Nord- und Südpol, Breitengrade parallel zum Äquator.
+                    </p>
+                    <p>
+                        Geographische Koordinaten werden häufig im Sexagesimalsystem angegeben, d. h. 1 Grad ist unterteilt in sechzig Minuten,
+                        1 Minute wiederum in 60 Sekunden.
+                    </p>
+                </section>
+
+                <section>
+                    <img src="images/koordinaten.gif" />
                 </section>
 
                 <section>
@@ -1171,7 +1361,7 @@
                 </section>
 
                 <section>
-                    <h3>Total einfach, oder?</h3>
+                    <h2>Total einfach, oder?</h2>
                     <p class="fragment">
                         \begin{matrix}
                         (x_1 - x_0)^2 + (y_1 - y_0)^2  + (z_1 - z_0)^2 = [c (t_1 - t_0)]^2 \quad (1)\\
@@ -1183,14 +1373,14 @@
                 </section>
 
                 <section>
-                    <h3>Fragen wir doch jemand, der sich damit auskennt</h3>
+                    <h2>Fragen wir doch jemand, der sich damit auskennt</h2>
                     <div class="fragment">
                         <a href="http://www.youtube.com/watch?v=v4Avr_hs4LA" target="_blank">Wie funktioniert GPS</a>
                     </div>
                 </section>
 
                 <section>
-                    <h3>Zusammengefasst</h3>
+                    <h2>Zusammengefasst</h2>
                     <ul>
                         <li>4 Satelliten werden benötigt, wenn die Zeit unbekannt ist</li>
                         <li>3 Satelliten wenn die Zeit bekannt ist</li>
@@ -1199,7 +1389,7 @@
                 </section>
 
                 <section>
-                    <h3>Aber</h3>
+                    <h2>Aber</h2>
                     <ul>
                         <li>Die Welt ist 3D</li>
                         <li>Genauigkeit steht und fällt mit der Anzahl der Satelliten</li>
@@ -1209,69 +1399,72 @@
                 </section>
 
                 <section>
-                    <h3>Grundformen</h3>
+                    <h2>Grundformen</h2>
                     <p> Einzelne shape formen (punkt, linestring, ...)</p>
                 </section>
 
                 <section>
-                    <h3>Beziehungen</h3>
+                    <h2>Beziehungen</h2>
                 </section>
 
                 <section>
-                    <h3>GeoJSON</h3>
+                    <h2>GeoJSON</h2>
                 </section>
 
                 <section>
-                    <h3>Navigation</h3>
+                    <h2>Navigation</h2>
                 </section>
 
                 <section>
-                    <h3>Geodaten in Bildern</h3>
+                    <h2>Geodaten in Bildern</h2>
                     <p>Geotags in Fotos (EXIF, XMP)</p>
+                    <p>
+                        <a href="http://www.binarus.de/articles/reverse-geotagging/reverse-geotagging.shtml" target="_blank">http://www.binarus.de/articles/reverse-geotagging/reverse-geotagging.shtml</a>
+                    </p>
                 </section>
 
                 <section>
-                    <h3>Geodaten in Html</h3>
+                    <h2>Geodaten in Html</h2>
                     <p>HTML-Einbindung (Meta-Tag, Mikroformate, RDF)</p>
                 </section>
 
                 <section>
-                    <h3>Geodaten in Javascript</h3>
+                    <h2>Geodaten in Javascript</h2>
                     <p>Zugriff auf die Browser-API</p>
                 </section>
 
                 <section>
-                    <h3>Die Klassiker</h3>
+                    <h2>Die Klassiker</h2>
                     <p>Google Maps, Google Earth, Google Street View z.B. als Einbindung auf der Webseite</p>
                 </section>
 
                 <section>
-                    <h3>Geotagging in Anwendungen</h3>
+                    <h2>Geotagging in Anwendungen</h2>
                     <p>Geotagging in Anwendung: z.B. Flickr, Panoramio, Wikipedia etc.</p>
                 </section>
 
                 <section>
-                    <h3>Geosuchen</h3>
+                    <h2>Geosuchen</h2>
                     <p>Geotagging und Suchmaschinen => Warum ist das wichtig (Pubs in der Nähe)</p>
                 </section>
 
                 <section>
-                    <h3>Geoblogging / Social Media</h3>
+                    <h2>Geoblogging / Social Media</h2>
                     <p>Geoblogging und andere Social-Media-Anwendungen (Twitter, Facebook, Flickr etc</p>
                 </section>
 
                 <section>
-                    <h3>Location Based Services</h3>
+                    <h2>Location Based Services</h2>
                     <p>Zusammenfassung von allem, Automatisierung je nach Standort, Taxi , ...</p>
                 </section>
 
                 <section>
-                    <h3>Die Erde ist rund...</h3>
+                    <h2>Die Erde ist rund...</h2>
                     <p>Doppeldeutige Koordinaten an Grenzen</p>
                 </section>
 
                 <section>
-                    <h3>Übung: Google Map Builder</h3>
+                    <h2>Übung: Google Map Builder</h2>
                     <p>Erstellt einen schönen Kartenausschnitt für die SAE</p>
                     <p><a href="http://googlemapbuilder.mynameisdonald.com/">http://googlemapbuilder.mynameisdonald.com/</a> </p>
                 </section>
